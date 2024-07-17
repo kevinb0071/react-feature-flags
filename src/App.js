@@ -1,5 +1,5 @@
-import LightDarkMode from "./components/dark-mode";
 import "./App.css";
+import LightDarkMode from "./components/dark-mode";
 import ImageSlider from "./components/image-slider";
 import LoadMoreData from "./components/load-more-data";
 import QRCodeGenerator from "./components/qr-code-generator";
@@ -13,36 +13,46 @@ import TicTacToe from "./components/tic-tac-toe";
 import TreeView from "./components/tree-view";
 import menus from "./components/tree-view/data";
 import StarRating from "./components/star-rating";
+import Accordian from "./components/accordion";
+import FeatureFlags from "./components/feature-flag";
+import FeaturFlagGlobalState from "./components/feature-flag/context";
 
 function App() {
   return (
     <div className="App">
+      {/* Accordian component */}
+      {/*<Accordian />*/}
       {/* ScrollIndicator */}
-      <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} />
+      {/*<ScrollIndicator url={"https://dummyjson.com/products?limit=100"} />*/}
       {/* LightDarkMode Component */}
-      <LightDarkMode />
+      {/*<LightDarkMode />*/}
       {/* Custom Tabs Component */}
-      <TabTest />
+      {/*<TabTest />*/}
       {/* Tree View Component */}
-      <TreeView menus={menus} />
+      {/*<TreeView menus={menus} />*/}
       {/* Custom Modal Popup Component */}
-      <ModalTest />
+      {/*<ModalTest />*/}
       {/*SearchAutocomplete */}
-      <SearchAutocomplete />
+      {/*<SearchAutocomplete />*/}
       {/* ImageSlider Comonent */}
-      <ImageSlider url={"https://picsum.photos/v2/list"} page={"1"} limit={4} />
+      {/*<ImageSlider url={"https://picsum.photos/v2/list"} page={"1"} limit={4} />*/}
       {/* LoadMoreData Comonent */}
-      <LoadMoreData />
+      {/*<LoadMoreData /> */}
       {/* QRCodeGenerator */}
-      <QRCodeGenerator />
+      {/*<QRCodeGenerator />*/}
       {/* GithubProfileFinder */}
-      <GithubProfileFinder />
+      {/*<GithubProfileFinder />*/}
       {/* RandomColor */}
-      <RandomColor />
+      {/*<RandomColor /> */}
       {/* TicTacToe */}
-      <TicTacToe />
+      {/*<TicTacToe /> */}
       {/* Star Rating Component */}
-      <StarRating noOfStars={10} />
+      {/*<StarRating noOfStars={10} />*/}
+
+      {/* FeatureFlags */}
+      <FeaturFlagGlobalState>
+        <FeatureFlags />
+      </FeaturFlagGlobalState>
     </div>
   );
 }
